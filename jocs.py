@@ -1,6 +1,6 @@
 from robot import robot
 def janken():
-    opcions = ["pedra" "paper" "tisora"]
+    opcions = ["pedra", "paper", "tisora"]
     while True:
         rondes = input("Quantes rondes vols jugar 3 o 5? ")
         puntuacio_usuari = 0
@@ -8,7 +8,7 @@ def janken():
         if rondes not in ["3", "5"]:
             print("Aquesta opcio no surt en les opcions que et donem")
         if rondes == "3":
-            while puntuacio_usuari < 4 and puntacio_robot:
+            while puntuacio_usuari < 4 and puntacio_robot < 4:
                 jugada = input("Tria paper, pedra o tisora: ")
                 jugada_robot = robot().playing()
                 if jugada not in opcions:
@@ -42,8 +42,8 @@ def janken():
                 elif puntacio_robot == 3:
                     print("Ha guanyat el robot")
                     break
-        if rondes == "5":
-            while puntuacio_usuari < 6 and puntacio_robot:
+        elif rondes == "5":
+            while puntuacio_usuari < 6 and puntacio_robot < 6:
                 jugada = input("Tria paper, pedra o tisora: ")
                 jugada_robot = robot().playing()
                 if jugada not in opcions:
@@ -91,4 +91,7 @@ def nana():
             print(" Aquest numero es massa baix")
         else: 
             print(f"Felicitats, has endevinat el numero en aquests{intents} intents. ")
-        break
+            break
+if __name__ == "__main__":
+    janken()
+    nana()
