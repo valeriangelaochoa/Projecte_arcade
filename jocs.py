@@ -86,11 +86,11 @@ def nana():
         numero = int(input("Introdueix un numero: "))
         intents +=1
         if numero < numero_endevinant:
-            print("Aquest numero es massa alt")
+            print("Aquest numero es massa baix")
         elif numero > numero_endevinant:
-            print(" Aquest numero es massa baix")
+            print(" Aquest numero es massa alt")
         else: 
-            print(f"Felicitats, has endevinat el numero en aquests{intents} intents. ")
+            print(f"Felicitats, has endevinat el numero en aquests {intents} intents. ")
             break
 if __name__ == "__main__":
     janken()
