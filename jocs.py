@@ -9,13 +9,18 @@ def janken():
             print("Aquesta opcio no surt en les opcions que et donem")
         if rondes == "3":
             while puntuacio_usuari < 4 and puntacio_robot < 4:
-                jugada = input("Tria paper, pedra o tisora: ")
+                jugada = input("Tria paper, pedra o tisora: ").strip()
                 jugada_robot = robot().playing()
+                # Accept 'S' or 's' to exit the game immediately
+                if jugada.lower() == "s":
+                    print("Estàs sortint del joc")
+                    return
                 if jugada not in opcions:
                     print("Aquesta elecció no esta entre les opcions per a triar")
-                elif jugada == jugada_robot:
+                    continue
+                if jugada == jugada_robot:
                     print("Han empatat")
-                elif (jugada == "pedra" and jugada_robot == "tisores"):
+                elif (jugada == "pedra" and jugada_robot == "tisora"):
                     print("Has guanyat")
                     puntuacio_usuari += 1
                 elif (jugada == "paper" and jugada_robot == "pedra"):
@@ -33,24 +38,26 @@ def janken():
                 elif (jugada == "paper" and jugada_robot == "tisora"):
                     print("ha guanyat el robot")
                     puntacio_robot += 1
-                elif jugada == "S":
-                    print("Estas surtin del joc")
-                    break
-                elif puntuacio_usuari == 3:
+                if puntuacio_usuari == 3:
                     print("Has guanyat la partida")
                     break
-                elif puntacio_robot == 3:
+                if puntacio_robot == 3:
                     print("Ha guanyat el robot")
                     break
         elif rondes == "5":
             while puntuacio_usuari < 6 and puntacio_robot < 6:
-                jugada = input("Tria paper, pedra o tisora: ")
+                jugada = input("Tria paper, pedra o tisora: ").strip()
                 jugada_robot = robot().playing()
+                # Accept 'S' or 's' to exit the game immediately
+                if jugada.lower() == "s":
+                    print("Estàs sortint del joc")
+                    return
                 if jugada not in opcions:
                     print("Aquesta elecció no esta entre les opcions per a triar")
-                elif jugada == jugada_robot:
+                    continue
+                if jugada == jugada_robot:
                     print("Han empatat")
-                elif (jugada == "pedra" and jugada_robot == "tisores"):
+                elif (jugada == "pedra" and jugada_robot == "tisora"):
                     print("Has guanyat")
                     puntuacio_usuari += 1
                 elif (jugada == "paper" and jugada_robot == "pedra"):
@@ -68,13 +75,10 @@ def janken():
                 elif (jugada == "paper" and jugada_robot == "tisora"):
                     print("ha guanyat el robot")
                     puntacio_robot += 1
-                elif jugada == "S":
-                    print("Estas surtin del joc")
-                    break
-                elif puntuacio_usuari == 5:
+                if puntuacio_usuari == 5:
                     print("Has guanyat la partida")
                     break
-                elif puntacio_robot == 5:
+                if puntacio_robot == 5:
                     print("Ha guanyat el robot")
                     break
 
