@@ -11,10 +11,6 @@ def janken():
             while puntuacio_usuari < 4 and puntacio_robot < 4:
                 jugada = input("Tria paper, pedra o tisora: ").strip()
                 jugada_robot = robot().playing()
-                # Accept 'S' or 's' to exit the game immediately
-                if jugada.lower() == "s":
-                    print("Estàs sortint del joc")
-                    return
                 if jugada not in opcions:
                     print("Aquesta elecció no esta entre les opcions per a triar")
                     continue
@@ -44,14 +40,13 @@ def janken():
                 if puntacio_robot == 3:
                     print("Ha guanyat el robot")
                     break
+                if jugada == "s":
+                    print("Sortim del jocs")
+                    return
         elif rondes == "5":
             while puntuacio_usuari < 6 and puntacio_robot < 6:
                 jugada = input("Tria paper, pedra o tisora: ").strip()
                 jugada_robot = robot().playing()
-                # Accept 'S' or 's' to exit the game immediately
-                if jugada.lower() == "s":
-                    print("Estàs sortint del joc")
-                    return
                 if jugada not in opcions:
                     print("Aquesta elecció no esta entre les opcions per a triar")
                     continue
@@ -81,6 +76,9 @@ def janken():
                 if puntacio_robot == 5:
                     print("Ha guanyat el robot")
                     break
+                if jugada == "s":
+                    print("Estàs sortint del joc")
+                    return
 
 def nana():
     import random
