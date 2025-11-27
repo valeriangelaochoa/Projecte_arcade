@@ -36,12 +36,9 @@ def janken():
                     puntacio_robot += 1
                 if puntuacio_usuari == 3:
                     print("Has guanyat la partida")
-                    break
+                    return
                 if puntacio_robot == 3:
                     print("Ha guanyat el robot")
-                    break
-                if jugada == "s":
-                    print("Sortim del jocs")
                     return
         elif rondes == "5":
             while puntuacio_usuari < 6 and puntacio_robot < 6:
@@ -72,12 +69,9 @@ def janken():
                     puntacio_robot += 1
                 if puntuacio_usuari == 5:
                     print("Has guanyat la partida")
-                    break
+                    return
                 if puntacio_robot == 5:
                     print("Ha guanyat el robot")
-                    break
-                if jugada == "s":
-                    print("Estàs sortint del joc")
                     return
 
 def nana():
