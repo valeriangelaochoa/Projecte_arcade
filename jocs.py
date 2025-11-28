@@ -124,6 +124,8 @@ def nana():
         else: 
             print(f"Felicitats, has endevinat el numero en aquests {intents} intents. ")
             break
+# Punt d'entrada per executar els jocs
 if __name__ == "__main__":
+# Crida a les funcions dels jocs pedra, paper o tisora i edenvinar el número
     janken()
     nana()
