@@ -11,10 +11,10 @@ def janken():
         victoria_usuari = 0
         victoria_robot = 0
         # Si l'usuari tries una opció que no és vàlida, li dona un missatge d'error
-        if rondes not in ["3", "5"]:
+        if rondes not in ["3 victories", "5 rondes"]:
             print("Aquesta opcio no surt en les opcions que et donem")
         # Ara si l'usuari tria jugar fins a 3 victòries
-        if rondes == "3":
+        if rondes == "3 victories":
             # Crea un bucle per jugar fins que un arribi a 3 victòries
             while victoria_usuari < 4 and victoria_robot < 4:
                 # Ens demana que elegim entre les opcions mostrades
@@ -61,7 +61,7 @@ def janken():
                     print("Ha guanyat el robot")
                     return
         # Ara si l'usuari tria jugar fins a 5 rondes
-        elif rondes == "5":
+        elif rondes == "5 rondes":
             # Fa un recompte de les rondes jugades
             ronda_count = 0
             # Crea un bucle per jugar 5 rondes i no sobrepassar-les
