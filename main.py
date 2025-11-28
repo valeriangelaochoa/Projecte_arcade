@@ -12,8 +12,8 @@ while True:
             jocs.janken()
         case "2":
             jocs.nana()
-        case " ":
-            print("Per favor posa una de les opcions que se le ofereix...")
         case "S":
             print("Moltes gracies, per jugar, s'ha esta tancat l'arcade...")
             break
+        case _:
+            print("Per favor posa una de les opcions que se le ofereix...")
